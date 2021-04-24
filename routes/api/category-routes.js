@@ -21,7 +21,7 @@ router.get('/:id', async (req, res) => {
       include: [{model: Product}],
     });
     if (!categoryData) {
-      res.status(404).json({message: "There is no product found with that ID!"});
+      res.status(404).json({message: "There is no category found with that ID!"});
       return;
     }
     res.status(200).json(categoryData);
@@ -71,7 +71,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!categoryData) {
-      res.status(404).json({ message: 'Category found with that id!' });
+      res.status(404).json({ message: 'There is no categoryfound with that id!' });
       return;
     }
 

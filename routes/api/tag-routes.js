@@ -38,7 +38,7 @@ router.get('/', async (req, res) => {
         where: {id: req.params.id}
       });
       if (!tagData) {
-        res.status(404).json({ message: 'There is no category with that ID!' });
+        res.status(404).json({ message: 'There is no tag with that ID!' });
         return;
       };
       res.status(200).json(tagData);
@@ -68,7 +68,7 @@ router.delete('/:id', async (req, res) => {
     });
 
     if (!tagData) {
-      res.status(404).json({ message: 'Category found with that id!' });
+      res.status(404).json({ message: 'There is no tag found with that id!' });
       return;
     }
 
